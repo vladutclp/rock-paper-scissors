@@ -13,62 +13,44 @@ function playRound(playerSelection, computerSelection) {
 
 	if(playerSelection == 'rock'){
 		if(computerSelection == 'paper'){
-			computerScore = computerScore + 1;
-			return "You lost!";
-			
+			computerScore++;	
 		}
 		else{
 			if(computerSelection == 'scissors'){
-				yourScore = yourScore + 1;
-				return "You won!";
-				
+				yourScore++;	
 			}
 			else{
-				yourScore = yourScore + 1;
-				computerScore = computerScore + 1;
-				return "It's a tie!";
-				
+				yourScore++;
+				computerScore++;
 			}
 		}
 	}
 	else
 		if(playerSelection == 'paper'){
 			if(computerSelection == 'scissors'){
-				computerScore = computerScore + 1;
-				return "You lost!";
-				
+				computerScore++;
 			}
 			else{
 				if(computerSelection == 'rock'){
-					yourScore = yourScore + 1;
-					return "You won!";
-					
+					yourScore++;	
 				}
 				else{
-					yourScore = yourScore + 1;
-					computerScore = computerScore + 1;
-					return "It's a tie!";
-					
+					yourScore++;
+					computerScore++;	
 				}
 			}
 		}
 		else{
 			if(computerSelection == 'rock'){
-				computerScore = computerScore + 1;
-				return "You lost!";
-				
+				computerScore++;	
 			}
 			else{
 				if(computerSelection == 'paper'){
-					yourScore = yourScore + 1;
-					return "You won!";
-					
+					yourScore++;	
 				}
 				else{
-					yourScore = yourScore + 1;
-					computerScore = computerScore + 1;
-					return "It's a tie!";
-					
+					yourScore++;
+					computerScore++;	
 				}
 			}
 		}
@@ -89,10 +71,12 @@ function game(){
 	while(nrGame < 5){
 		playerInput = prompt("Choose your destiny");
 		computerSelection = computerPlay();
+		console.log("Computer choice: " + computerSelection + "\nYou choice: " + playerInput);
 		playRound(playerInput, computerSelection);
 		nrGame++;
+		console.log("Computer score: " + computerScore + "\nYour score: " + yourScore);
 	}
-	
+
 	if(yourScore > computerScore){
 		alert("You Won");
 	}
@@ -102,7 +86,7 @@ function game(){
 	else{
 		alert("It's a tie!")
 	}
-	
+
 	resetScore();
 }
 
