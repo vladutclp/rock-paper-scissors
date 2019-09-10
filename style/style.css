@@ -1,5 +1,6 @@
 html{
 	background-color: rgb(255, 200, 0);
+	overflow-x: hidden;
 }
 
 .remove{
@@ -43,19 +44,31 @@ button{
 	width: 100px;
 	border: 1px solid black;
 	background-color: purple;
-	position: relative;
-	top: 250px;
+	font-size: 28px;
+	font-weight: bold;
 	
 	
 }
 
+#reset:hover{
+	cursor: pointer;
+	box-shadow: 4px 4px 2px black;
+}
 
-.alegeri{
+#reset_div{
 	position: relative;
 	top: 250px;
 	margin: 0 auto;
+	left: 450px	;
+}
+
+.alegeri{
+	position: relative;
+	top: 200px;
+	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 500px 500px 500px;
+	left: 220px;
 }
 
 #start>img{
@@ -75,5 +88,12 @@ button{
 	width: 40%;
  	margin: 0 auto;
     display: block;
+
+}
+#rock, #paper, #scissors{
+	outline: none;
+}
+#rock:hover, #paper:hover, #scissors:hover{
+	cursor: pointer;
 
 }
