@@ -3,14 +3,63 @@
 <html>
 <head>
 	<title>Rock, paper, scissors</title>
+	
+	<link rel="stylesheet" type="text/css" href="./style/style.css">
 
 </head>
 
 <body>
+
+	<div class="start">
+		<button id="start">
+			<img src="./images/start.png" >
+		</button>
+	</div>
 	
+	<div id="removeID" class="remove">
+		<div class="tabela ">Score</div>
+	
+		<div class="alegeri">
+			<div id="rock" class="buton">
+				<button  class="">
+					<img src="./images/rock.png" >
+				</button>
+			</div>
+			
+			<div id="paper" class="buton">  
+				<button  class="">
+					<img src="./images/paper.png" >
+				</button>
+			</div>
+
+			<div id="scissors" class="buton">
+				<button  class="">
+					<img src="./images/scissors.png" >
+				</button>
+			</div>
 
 
+			<div>
+				<button id="reset" class="">Reset</button>
+			</div>
+		</div>
 
+		<p id="yourScore">
+			Your score:
+		</p>
+
+		<p id="computerScore">
+			Computer score:
+		</p>
+
+		<div class="choices">
+			<p class="yourChoice"></p>
+			<p class="computerChoice"></p>
+		</div>
+
+		<p id="finalMessage"></p>
+
+	</div>
 	<script src="./script/script.js" type="text/javascript"></script>
 
 </body>
