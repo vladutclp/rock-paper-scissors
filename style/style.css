@@ -97,3 +97,45 @@ button{
 	cursor: pointer;
 
 }
+
+
+#computerScore{
+	position: absolute;
+	right: 10px;
+}
+
+
+
+.tabela{
+	display: grid;
+	grid-template-columns: 500px 500px;
+	grid-template-rows: 100px 100px;
+	font-size: 40px;
+}
+
+.choices{
+	position: absolute;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	font-size: 40px;
+	bottom: 0px;
+}
+
+#computerChoice{
+	position: absolute;
+	right: 10px;
+}
+
+#finalMessage{
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+	position: relative;
+	top: -100px;
+}
+
+.computerChoice{
+	position: absolute;
+	right: 20px;
+}

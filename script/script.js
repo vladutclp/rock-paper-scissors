@@ -7,7 +7,7 @@ const scoreDiv = document.querySelector(".tabela");
 const yourScoreDisplayed = document.querySelector('#yourScore'), computerScoreDisplayed = document.querySelector('#computerScore'); //Paragraphs to display score
 yourScoreDisplayed.textContent = "Your score: " + yourScore; // Display user score on the page
 computerScoreDisplayed.textContent = "Computer score: " + computerScore;	// Display computer score on the page
-
+	
 
 
 scoreDiv.appendChild(yourScoreDisplayed);
@@ -173,12 +173,18 @@ function playGame(){
 		//alert("gata");
 		nrGame = 0;
 		
-		if(yourScore > computerScore)
+		if(yourScore > computerScore){
 			finalMessage.textContent = "You won!!!";
-		else if(yourScore < computerScore)
-			finalMessage.textContent = "You lost!"
-		else
-			finalMessage.textContent = "ITS A FUCKIN TIEEEEEEE!!";
+			finalMessage.style.color = "green";
+		}
+		else if(yourScore < computerScore){
+			finalMessage.textContent = "You lost!";
+			finalMessage.style.color = "red";
+		}
+		else{
+			finalMessage.textContent = "IT'S A FKIN TIEEEEEEE!!";
+			finalMessage.style.color = "white";
+		}
 		
 		rock.disabled = true;
 		paper.disabled = true;
